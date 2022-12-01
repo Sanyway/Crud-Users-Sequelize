@@ -34,7 +34,7 @@ const postUser = (req, res) => {
         })
         .catch(err => {
             res.status(400).json({
-                message: "Invalid Data",
+                message: "Invalid Data. at least first name, email and password are needed",
                 fields: {
                   first_name: 'string*',
                   last_name: 'string',

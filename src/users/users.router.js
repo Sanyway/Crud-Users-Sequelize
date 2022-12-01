@@ -4,12 +4,12 @@ const userServices = require('./users.services')
 
 
 
-router.get('/api/v1/users', userServices.getAllUsers)
-router.post('/api/v1/users', userServices.postUser)
+router.get('/users', userServices.getAllUsers)
+router.post('/users', userServices.postUser)
 
-router.get('/api/v1/users/:id', userServices.getUserById)
-router.patch('/api/v1/users/:id', userServices.patchUser)
-router.delete('/api/v1/users/:id', userServices.deleteUser)
+router.get('/users/:id', userServices.getUserById)
+router.patch('/users/:id', userServices.patchUser)
+router.delete('/users/:id', userServices.deleteUser)
 
 
 module.exports = router

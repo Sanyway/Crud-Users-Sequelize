@@ -29,8 +29,10 @@ const Users = db.define('crudUsers', {
     },
     birthday: {
         type: DataTypes.TEXT,
-    },
-})
+    } }, {
+        timestamps: false 
+    }
+)
 
 
 module.exports = Users;

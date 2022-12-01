@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
     });
 });
 
-app.use('/api/v1/users', usersRouter);
+app.use('/api/v1', usersRouter);
 
 app.listen(port, () => {
   console.log(`Server started at port ${port}`);

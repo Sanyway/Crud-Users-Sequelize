@@ -9,11 +9,8 @@ const findAllUsers = async () => {
 const findUserById = async (id) => {
     const data = await Users.findOne({
         where: {
-            id,
-        },
-        attributes: {
-            exclude: ['password'],
-        },
+            id: id
+        }
     });
     return data;
     
@@ -21,16 +18,17 @@ const findUserById = async (id) => {
 
 const createUser = async (obj) => {
     const newUser = await Users.create({
-        first_name: data.first_name,
-        last_name: data.last_name,
-        email: data.email,
-        password: data.password,
-        birthday: data.birthday
+       
+        first_name: obj.first_name,
+        last_name: obj.last_name,
+        email: obj.email,
+        password: obj.password,
+        birthday: obj.birthday
     });
     return newUser;
 };
 const updateUser = async (id, obj) => {
-    const data = await Quotes.update(obj, {
+    const data = await Users.update(obj, {
         where: {
             id: id
         }
@@ -43,7 +41,7 @@ const deleteUser = async (id) => {
             id: id,
         },
     });
-    return data;
+    return 1;
 };
 
 
